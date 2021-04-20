@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for nombre in doc %}
+
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-4">
+
+     
+
+    
+     <div class="card" >
+        <div class="card-heder">
+              <h4>juego 1</h4>
+        </div >
+        <div class="card-body">
+               <h2> <a href="{% url 'detalleJuego' nombre.pk%}"> {{ nombre.juego}} </a></h2>
+                  <p>    {{ nombre.edades }} </p>
+                  <p>    {{ nombre.descripcion}}</p>
+        </div>
+        <img src= {{ nombre.foto }}  style="width: 200px;height: 200px;">          
+    </div>
+</div>
+</div>
+</div>
+
+    
+
+
+
+    {% endfor %}
+
+
+
+
+{% endblock content %}
